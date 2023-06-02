@@ -14,13 +14,17 @@ function 시간() {
 function 실행() {
   if (clock.innerText === "00:00") {
     console.log(clock.innerText);
+    clock.style.backgroundColor = "black";
+    시작 = new Date();
     인터벌 = setInterval(시간, 1000);
   } else if (clock.innerText === 정지) {
     clock.innerText = "00:00";
     시작 = new Date();
-    인터벌 = setInterval(시간, 1000);
+    clock.style.backgroundColor = "black";
+    //인터벌 = setInterval(시간, 1000);
   } else {
     정지 = clock.innerText;
+    clock.style.backgroundColor = "red";
     스탑();
     console.log(정지);
     clock.innerText = 정지;
